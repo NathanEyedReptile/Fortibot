@@ -18,4 +18,16 @@ public class UIHelper
         F O R T I B O T  //  Stay Secure
 ");
 
+        Console.ResetColor();
+    }
+
+    public static void TypeText(string text)
+    {
+        foreach (char c in text)
+        {
+            Console.Write(c);
+            Thread.Sleep(15);
+        }
+        Console.WriteLine();
+    }
 }
