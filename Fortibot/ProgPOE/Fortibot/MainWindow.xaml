@@ -1,0 +1,100 @@
+﻿<Window x:Class="FortiBot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="FortiBot - Cybersecurity Assistant"
+        Height="600"
+        Width="900"
+        ResizeMode="CanMinimize"
+        Background="#111827">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER -->
+        <Border Grid.Row="0"
+                Background="#1F2937"
+                CornerRadius="10"
+                Padding="15"
+                Margin="0,0,0,10">
+
+            <StackPanel>
+
+                <TextBlock Text="FORTIBOT"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Foreground="#22D3EE"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Cybersecurity Awareness Assistant"
+                           FontSize="14"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           Margin="0,5,0,0"/>
+
+            </StackPanel>
+
+        </Border>
+
+        <!-- CHAT AREA -->
+        <Border Grid.Row="1"
+                Background="#1F2937"
+                CornerRadius="10"
+                Padding="10">
+
+            <ScrollViewer x:Name="ChatScrollViewer"
+              VerticalScrollBarVisibility="Auto">
+
+                <TextBlock x:Name="ChatHistory"
+                           Foreground="White"
+                           FontSize="14"
+                           TextWrapping="Wrap"/>
+
+            </ScrollViewer>
+
+        </Border>
+
+        <!-- INPUT AREA -->
+        <Grid Grid.Row="2"
+              Margin="0,10,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- USER INPUT -->
+            <TextBox x:Name="UserInput"
+         Grid.Column="0"
+         Height="40"
+         FontSize="14"
+         Padding="10"
+         Background="#374151"
+         Foreground="White"
+         BorderBrush="#22D3EE"
+         CaretBrush="White"
+         KeyDown="UserInput_KeyDown"/>
+
+            <!-- SEND BUTTON -->
+            <Button x:Name="SendButton"
+                    Grid.Column="1"
+                    Margin="10,0,0,0"
+                    Content="SEND"
+                    FontWeight="Bold"
+                    FontSize="14"
+                    Background="#22D3EE"
+                    Foreground="Black"
+                    BorderThickness="0"
+                    Click="SendButton_Click"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

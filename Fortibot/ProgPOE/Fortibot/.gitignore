@@ -1,0 +1,46 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+AppPackages/
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Resharper
+_ReSharper*/
+*.ReSharper*/
+
+# Others
+*.log
+*.tmp
+
+# Ignore Visual Studio workspace index files
+**/.vs/**
+
+# Ignore compiled apphost and publish files
+**/apphost.exe
+
+# Ignore NuGet packages
+*.nupkg
+# NuGet package directories
+packages/
+
+# Ignore test results
+TestResults/
+
+# Ignore generated files
+*.g.cs
+*.g.i.cs
+
+# Keep the .gitignore itself
+!.gitignore
